@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700&subset=latin-ext');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#hero {
+    position: relative;
+}
+
+#hero video {
+    height: 100vh;
+    width: 100%;
+    background-position: absolute;
+    z-index: 10;
+    object-fit: cover;
+}
+
+#hero .animationText {
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.font-family {
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.animationText h1 {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.animationText h1 span {
+    color:#87CEFA
+}
+
+.skill-bars{
+    padding: 25px 30px;
+    width: 600px; background: #fff;
+    box-shadow: 0px 5px 20px rgba(105, 35, 209, 0.233);
+    border-radius: 10px;  
+ }
+ .bar{ margin: 20px 0; }
+ .bar:first-child{ margin-top: 0; }
+ .info{ margin-bottom: 0; }
+ .info span{
+     font-weight: 500;
+     font-size: 17px; opacity: 0;
+     animation: showText .5s 1s linear forwards;
+ }
+ @keyframes showText {
+     100%{
+         opacity: 1;
+     }
+ }
+ .progress-line{
+     height: 10px; width: 100%;
+     background: #e7edfb; position: relative;
+     transform: scaleX(0); transform-origin: left;
+     border-radius: 10px;
+     box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                 0 1px rgba(255,255,255,.8);
+     animation: animate 2s cubic-bezier(1,0,0.5,1) forwards;
+ }
+ .progress-line span{
+     height: 100%; position: absolute;
+     border-radius: 10px;
+     transform: scaleX(0);
+     transform-origin: left;
+     background: #000000;
+     animation: animate 2s 1s cubic-bezier(1,0,0.5,1) forwards;
+ }
+ .progress-line span::before{
+     position: absolute; content: "";
+     top:-10px; right: 0; height: 0;
+     width: 0; opacity: 0;
+     border: 7px solid transparent;
+     border-bottom-width: 0;
+     border-right-width: 0;
+     border-top-color: #000000;
+     animation: showText2 .5s 1.5s linear forwards;
+ }
+ .progress-line span::after{
+     position: absolute; 
+     top:-28px; right: 0; font-weight: 500;
+     background: #000000;
+     color:#fff; opacity: 0;
+     padding: 1.5px 8px;
+     font-size: 12px;
+     border-radius: 3px;
+     animation: showText2 .5s 1.5s linear forwards;
+ }
+ @keyframes animate {
+     100%{
+         transform: scaleX(1);
+     }    
+ }
+ .html span{ 
+     width: 92%; 
+ }
+ .css span{
+     width: 86%; 
+ }
+ .js span{
+     width: 55%; 
+ }
+ .bootstrap span{
+     width: 81%; 
+ }
+ .html span::after{
+     content: "92%"; 
+ }
+ .css span::after{
+     content: "86%"; 
+ }
+ .js span::after{
+     content: "55%"; 
+ }
+ .bootstrap span::after{
+     content: "81%"; 
+ }
+ @keyframes showText2 {
+     100%{
+         opacity: 1;
+     }
+ }
+
+ .footer-a {
+     text-decoration: none;
+     color: white;
+     margin-left: 5px;
+ }
+
+ .footer-a:hover {
+     color: #87CEFA;
+ }
+
+#hakkimda {
+    cursor: pointer;
+}
+
+.aw-zoom
+{
+    position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+}
+.aw-zoom:hover
+{
+    z-index:2;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);  
+    -moz-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .animationText h1 {
+        font-size: 30px;
+    }
+
+    #hero video{
+        width: 100%;
+        height: auto;
+    }
+
+    .content img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .content h2 p {
+        display: block;
+    }
+
+    .content h2 {
+        margin-top: 20px;
+    }
+}
